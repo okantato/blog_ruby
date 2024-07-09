@@ -1943,3 +1943,580 @@ Processing by VehiclesController#index as HTML
 Completed 200 OK in 22ms (Views: 17.0ms | ActiveRecord: 3.2ms | Allocations: 26541)
 
 
+Started GET "/" for 127.0.0.1 at 2024-07-09 15:46:17 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 204)
+  Rendered layout layouts/application.html.erb (Duration: 40.7ms | Allocations: 41423)
+Completed 200 OK in 51ms (Views: 43.9ms | ActiveRecord: 0.0ms | Allocations: 48264)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-09 15:48:18 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 22045)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 23367)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-09 15:50:54 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 20003)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 21308)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-09 15:51:42 -0300
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for HomeController):
+  
+actionpack (7.1.3.4) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.3.4) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.1.4) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.4) lib/rack/etag.rb:29:in `call'
+rack (3.1.4) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.4) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.4) lib/rack/method_override.rb:28:in `call'
+rack (3.1.4) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.4) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-07-09 15:52:30 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 31.4ms | Allocations: 5871)
+  Rendered layout layouts/application.html.erb (Duration: 40.3ms | Allocations: 25509)
+Completed 200 OK in 48ms (Views: 44.7ms | ActiveRecord: 0.0ms | Allocations: 26816)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-07-09 15:54:20 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1370)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 20951)
+Completed 200 OK in 67ms (Views: 9.2ms | ActiveRecord: 15.6ms | Allocations: 145158)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-07-09 15:58:06 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 690)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 7115)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 7465)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-09 16:12:25 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 204)
+  Rendered layout layouts/application.html.erb (Duration: 50.3ms | Allocations: 50454)
+Completed 200 OK in 55ms (Views: 51.9ms | ActiveRecord: 0.0ms | Allocations: 57309)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-07-09 16:12:30 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2009)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3688)
+Completed 200 OK in 56ms (Views: 3.7ms | ActiveRecord: 5.7ms | Allocations: 127143)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2024-07-09 16:12:32 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"", "model"=>"", "year"=>"", "kind"=>""}, "commit"=>"Create"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 970)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/vehicles_controller.rb:11:in `create'
+Started POST "/vehicles" for 127.0.0.1 at 2024-07-09 16:15:45 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"", "model"=>"", "year"=>"", "kind"=>""}, "commit"=>"Create"}
+No template found for VehiclesController#create, rendering head :no_content
+Completed 204 No Content in 7ms (ActiveRecord: 1.6ms | Allocations: 5302)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2024-07-09 16:19:01 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"", "model"=>"", "year"=>"", "kind"=>""}, "commit"=>"Create"}
+No template found for VehiclesController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 492)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-07-09 16:34:48 -0300
+  
+SyntaxError (/home/thaisbrito/Área de Trabalho/Estudos/blog_ruby/app/controllers/vehicles_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/vehicles_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-07-09 16:34:51 -0300
+  
+SyntaxError (/home/thaisbrito/Área de Trabalho/Estudos/blog_ruby/app/controllers/vehicles_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/vehicles_controller.rb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-07-09 16:35:32 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1554)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 21289)
+Completed 200 OK in 30ms (Views: 10.8ms | ActiveRecord: 2.4ms | Allocations: 29640)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2024-07-09 16:35:48 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"2121", "model"=>"aaaa", "year"=>"2224", "kind"=>"242323"}, "commit"=>"Create"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:16:in `create'
+  [1m[36mVehicle Create (8.6ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "year", "created_at", "updated_at", "kind", "plate") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", nil], ["model", nil], ["year", nil], ["created_at", "2024-07-09 19:35:48.809587"], ["updated_at", "2024-07-09 19:35:48.809587"], ["kind", nil], ["plate", nil]]
+  ↳ app/controllers/vehicles_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:16:in `create'
+Redirected to http://127.0.0.1:3000/vehicles/2
+Completed 302 Found in 13ms (ActiveRecord: 9.6ms | Allocations: 4066)
+
+
+Started GET "/vehicles/2" for 127.0.0.1 at 2024-07-09 16:35:48 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 404 Not Found in 18ms (ActiveRecord: 0.0ms | Allocations: 3546)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Vehicle without an ID):
+  
+app/controllers/vehicles_controller.rb:11:in `show'
+Started POST "/vehicles" for 127.0.0.1 at 2024-07-09 16:36:07 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"2121", "model"=>"aaaa", "year"=>"2224", "kind"=>"1"}, "commit"=>"Create"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:16:in `create'
+  [1m[36mVehicle Create (1.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "year", "created_at", "updated_at", "kind", "plate") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", nil], ["model", nil], ["year", nil], ["created_at", "2024-07-09 19:36:07.800340"], ["updated_at", "2024-07-09 19:36:07.800340"], ["kind", nil], ["plate", nil]]
+  ↳ app/controllers/vehicles_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:16:in `create'
+Redirected to http://127.0.0.1:3000/vehicles/3
+Completed 302 Found in 5ms (ActiveRecord: 2.4ms | Allocations: 2438)
+
+
+Started GET "/vehicles/3" for 127.0.0.1 at 2024-07-09 16:36:07 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 550)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Vehicle without an ID):
+  
+app/controllers/vehicles_controller.rb:11:in `show'
+Started POST "/vehicles" for 127.0.0.1 at 2024-07-09 16:37:47 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"2121", "model"=>"aaaa", "year"=>"2224", "kind"=>"1"}, "commit"=>"Create"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:17:in `create'
+  [1m[36mVehicle Create (1.1ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "year", "created_at", "updated_at", "kind", "plate") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", "2121"], ["model", "aaaa"], ["year", 2224], ["created_at", "2024-07-09 19:37:47.854587"], ["updated_at", "2024-07-09 19:37:47.854587"], ["kind", 1], ["plate", nil]]
+  ↳ app/controllers/vehicles_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:17:in `create'
+Redirected to http://127.0.0.1:3000/vehicles/4
+Completed 302 Found in 11ms (ActiveRecord: 5.0ms | Allocations: 7207)
+
+
+Started GET "/vehicles/4" for 127.0.0.1 at 2024-07-09 16:37:47 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1663)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1744)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 5338)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h2> veiculos </h2>
+    2: 
+    3: <% @vehicles.each do |vehicle| %>
+    4:     <p>
+    5:         <%= vehicle.id %>
+    6:          <%= vehicle.brand %>
+  
+app/views/vehicles/show.html.erb:3
+Started GET "/vehicles/4" for 127.0.0.1 at 2024-07-09 16:38:09 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1608)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1689)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.9ms | Allocations: 8728)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h2> veiculos </h2>
+    2: 
+    3: <% @vehicles.each do | vehicle | %>
+    4:     <p>
+    5:         <%= vehicle.id %>
+    6:          <%= vehicle.brand %>
+  
+app/views/vehicles/show.html.erb:3
+Started POST "/vehicles" for 127.0.0.1 at 2024-07-09 16:38:14 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"2121", "model"=>"aaaa", "year"=>"2224", "kind"=>"1"}, "commit"=>"Create"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:17:in `create'
+  [1m[36mVehicle Create (1.4ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "year", "created_at", "updated_at", "kind", "plate") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", "2121"], ["model", "aaaa"], ["year", 2224], ["created_at", "2024-07-09 19:38:14.249346"], ["updated_at", "2024-07-09 19:38:14.249346"], ["kind", 1], ["plate", nil]]
+  ↳ app/controllers/vehicles_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:17:in `create'
+Redirected to http://127.0.0.1:3000/vehicles/5
+Completed 302 Found in 5ms (ActiveRecord: 2.2ms | Allocations: 2601)
+
+
+Started GET "/vehicles/5" for 127.0.0.1 at 2024-07-09 16:38:14 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1413)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 1488)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 2333)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h2> veiculos </h2>
+    2: 
+    3: <% @vehicles.each do | vehicle | %>
+    4:     <p>
+    5:         <%= vehicle.id %>
+    6:          <%= vehicle.brand %>
+  
+app/views/vehicles/show.html.erb:3
+Started POST "/vehicles" for 127.0.0.1 at 2024-07-09 16:40:47 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"2121", "model"=>"aaaa", "year"=>"2224", "kind"=>"1"}, "commit"=>"Create"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:17:in `create'
+  [1m[36mVehicle Create (1.1ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "year", "created_at", "updated_at", "kind", "plate") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", "2121"], ["model", "aaaa"], ["year", 2224], ["created_at", "2024-07-09 19:40:47.767047"], ["updated_at", "2024-07-09 19:40:47.767047"], ["kind", 1], ["plate", nil]]
+  ↳ app/controllers/vehicles_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:17:in `create'
+Redirected to http://127.0.0.1:3000/vehicles/6
+Completed 302 Found in 10ms (ActiveRecord: 3.3ms | Allocations: 7133)
+
+
+Started GET "/vehicles/6" for 127.0.0.1 at 2024-07-09 16:40:47 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1663)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1744)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 4279)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <h2> veiculos - id <%= @vehicles.id %> </h2>
+    2: 
+    3: <% @vehicles.each do | vehicle | %>
+    4:     <p>
+  
+app/views/vehicles/show.html.erb:1
+Started POST "/vehicles" for 127.0.0.1 at 2024-07-09 16:43:43 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"2121", "model"=>"aaaa", "year"=>"2224", "kind"=>"1"}, "commit"=>"Create"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:17:in `create'
+  [1m[36mVehicle Create (1.1ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "year", "created_at", "updated_at", "kind", "plate") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", "2121"], ["model", "aaaa"], ["year", 2224], ["created_at", "2024-07-09 19:43:43.103949"], ["updated_at", "2024-07-09 19:43:43.103949"], ["kind", 1], ["plate", nil]]
+  ↳ app/controllers/vehicles_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:17:in `create'
+Redirected to http://127.0.0.1:3000/vehicles/7
+Completed 302 Found in 9ms (ActiveRecord: 3.4ms | Allocations: 7134)
+
+
+Started GET "/vehicles/7" for 127.0.0.1 at 2024-07-09 16:43:43 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 7.8ms | Allocations: 4276)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 4357)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms | Allocations: 6899)
+
+
+  
+ActionView::Template::Error (undefined method `edit_vehicle_path' for #<ActionView::Base:0x0000000002eae0>
+Did you mean?  new_vehicle_path):
+    26:   <%= @vehicle.kind %>
+    27: </p>
+    28: 
+    29: <%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
+    30: <%= link_to 'Back', vehicles_path %>
+  
+app/views/vehicles/show.html.erb:29
+Started GET "/vehicles/7" for 127.0.0.1 at 2024-07-09 16:43:54 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 326)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 20305)
+Completed 200 OK in 18ms (Views: 10.8ms | ActiveRecord: 1.7ms | Allocations: 27364)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2024-07-09 16:49:16 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"2122", "model"=>"bbbbb", "year"=>"22233", "kind"=>"1"}, "commit"=>"Create"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1196)
+
+
+  
+SyntaxError (/home/thaisbrito/Área de Trabalho/Estudos/blog_ruby/app/models/vehicle.rb:2: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+...model, :year, :kind, presence :true
+...                              ^
+):
+  
+app/models/vehicle.rb:2: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/controllers/vehicles_controller.rb:15:in `create'
+Started POST "/vehicles" for 127.0.0.1 at 2024-07-09 16:54:34 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"2122", "model"=>"bbbbb", "year"=>"22233", "kind"=>"1"}, "commit"=>"Create"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1194)
+
+
+  
+SyntaxError (/home/thaisbrito/Área de Trabalho/Estudos/blog_ruby/app/models/vehicle.rb:2: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+...model, :year, :kind, presence :true
+...                              ^
+):
+  
+app/models/vehicle.rb:2: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/controllers/vehicles_controller.rb:16:in `create'
+Started POST "/vehicles" for 127.0.0.1 at 2024-07-09 16:54:38 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"2122", "model"=>"bbbbb", "year"=>"22233", "kind"=>"1"}, "commit"=>"Create"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1070)
+
+
+  
+SyntaxError (/home/thaisbrito/Área de Trabalho/Estudos/blog_ruby/app/models/vehicle.rb:2: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+...model, :year, :kind, presence :true
+...                              ^
+):
+  
+app/models/vehicle.rb:2: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/controllers/vehicles_controller.rb:16:in `create'
+Started POST "/vehicles" for 127.0.0.1 at 2024-07-09 16:55:43 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"2122", "model"=>"bbbbb", "year"=>"22233", "kind"=>"1"}, "commit"=>"Create"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:18:in `create'
+  [1m[36mVehicle Create (0.9ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "year", "created_at", "updated_at", "kind", "plate") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", "2122"], ["model", "bbbbb"], ["year", 22233], ["created_at", "2024-07-09 19:55:43.206376"], ["updated_at", "2024-07-09 19:55:43.206376"], ["kind", 1], ["plate", nil]]
+  ↳ app/controllers/vehicles_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:18:in `create'
+Redirected to http://127.0.0.1:3000/vehicles/8
+Completed 302 Found in 22ms (ActiveRecord: 5.9ms | Allocations: 10363)
+
+
+Started GET "/vehicles/8" for 127.0.0.1 at 2024-07-09 16:55:43 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mVehicle Load (0.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 320)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 20285)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 22927)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2024-07-09 16:55:52 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"", "model"=>"bbbbb", "year"=>"22233", "kind"=>"1"}, "commit"=>"Create"}
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 3809)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3884)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 5154)
+
+
+  
+ActionView::Template::Error (undefined method `erros' for #<Vehicle id: nil, brand: "", model: "bbbbb", year: 22233, created_at: nil, updated_at: nil, kind: 1, plate: nil>
+Did you mean?  errors):
+    1: <!-- app/views/vehicles/new.html.erb -->
+    2: <h2>New Vehicle Form</h2>
+    3:   <% if @vehicle.erros.any? %>
+    4:   <% @vehicleerros.full_messeges.each do | message| %>
+    5:     <p>
+    6:       <% message %>
+  
+app/views/vehicles/new.html.erb:3
+app/controllers/vehicles_controller.rb:21:in `create'
+Started POST "/vehicles" for 127.0.0.1 at 2024-07-09 16:56:17 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"", "model"=>"bbbbb", "year"=>"22233", "kind"=>"1"}, "commit"=>"Create"}
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1825)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1906)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.4ms | Allocations: 8661)
+
+
+  
+ActionView::Template::Error (undefined method `full_messeges' for nil:NilClass):
+    1: <!-- app/views/vehicles/new.html.erb -->
+    2: <h2>New Vehicle Form</h2>
+    3:   <% if @vehicle.errors.any? %>
+    4:   <% @vehicleerros.full_messeges.each do | message| %>
+    5:     <p>
+    6:       <% message %>
+    7:     </p>
+  
+app/views/vehicles/new.html.erb:4
+app/controllers/vehicles_controller.rb:21:in `create'
+Started POST "/vehicles" for 127.0.0.1 at 2024-07-09 16:56:20 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"", "model"=>"bbbbb", "year"=>"22233", "kind"=>"1"}, "commit"=>"Create"}
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1331)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1406)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2662)
+
+
+  
+ActionView::Template::Error (undefined method `full_messeges' for nil:NilClass):
+    1: <!-- app/views/vehicles/new.html.erb -->
+    2: <h2>New Vehicle Form</h2>
+    3:   <% if @vehicle.errors.any? %>
+    4:   <% @vehicleerros.full_messeges.each do | message| %>
+    5:     <p>
+    6:       <% message %>
+    7:     </p>
+  
+app/views/vehicles/new.html.erb:4
+app/controllers/vehicles_controller.rb:21:in `create'
+Started POST "/vehicles" for 127.0.0.1 at 2024-07-09 16:56:38 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"", "model"=>"bbbbb", "year"=>"22233", "kind"=>"1"}, "commit"=>"Create"}
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 2254)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2335)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.7ms | Allocations: 9148)
+
+
+  
+ActionView::Template::Error (undefined method `full_messeges' for #<ActiveModel::Errors [#<ActiveModel::Error attribute=brand, type=blank, options={}>]>
+Did you mean?  full_messages
+               full_message):
+    1: <!-- app/views/vehicles/new.html.erb -->
+    2: <h2>New Vehicle Form</h2>
+    3:   <% if @vehicle.errors.any? %>
+    4:   <% @vehicle.errors.full_messeges.each do | message| %>
+    5:     <p>
+    6:       <% message %>
+    7:     </p>
+  
+app/views/vehicles/new.html.erb:4
+app/controllers/vehicles_controller.rb:21:in `create'
+Started POST "/vehicles" for 127.0.0.1 at 2024-07-09 16:57:45 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"", "model"=>"bbbbb", "year"=>"22233", "kind"=>"1"}, "commit"=>"Create"}
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 2252)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 21912)
+Completed 200 OK in 19ms (Views: 12.1ms | ActiveRecord: 1.5ms | Allocations: 28686)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2024-07-09 17:02:43 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"", "model"=>"bbbbb", "year"=>"", "kind"=>"1"}, "commit"=>"Create Vehicle"}
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 2149)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 3730)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 4984)
+
+
