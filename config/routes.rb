@@ -1,34 +1,34 @@
 Rails.application.routes.draw do
-  # get '/', to: 'home#index'
+  # Define a rota raiz
   root 'home#index'
 
-  # criando a rota para index
-  resources :vehicles, only: [:index]
+  # Define as rotas para os veículos
+  resources :vehicles, only: [:index, :new, :create, :show]
+
+  # Abaixo estão os exemplos de rotas manuais comentados. 
+  # Se você usar `resources :vehicles`, estas rotas são geradas automaticamente.
 
   # # Para listar todos os veículos
-  # get '/vehicles', controller: 'vehicles', action: 'index'
+  # get '/vehicles', to: 'vehicles#index'
 
   # # Para exibir o formulário de criação de um novo veículo
-  # get '/vehicles/new', controller: 'vehicles', action: 'new'
+  # get '/vehicles/new', to: 'vehicles#new'
 
   # # Para criar um novo veículo
-  # post '/vehicles', controller: 'vehicles', action: 'create'
+  # post '/vehicles', to: 'vehicles#create'
 
-  # # Para exibir um veículo específico (formulário de edição)
-  # get '/vehicles/:id', controller: 'vehicles', action: 'edit'
+  # # Para exibir um veículo específico
+  # get '/vehicles/:id', to: 'vehicles#show'
 
   # # Para exibir o formulário de edição de um veículo específico
-  # get '/vehicles/:id/edit', controller: 'vehicles', action: 'edit'
+  # get '/vehicles/:id/edit', to: 'vehicles#edit'
 
   # # Para atualizar um veículo específico (método PUT)
-  # put '/vehicles/:id', controller: 'vehicles', action: 'update'
+  # put '/vehicles/:id', to: 'vehicles#update'
 
   # # Também para atualizar um veículo específico (método PATCH)
-  # patch '/vehicles/:id', controller: 'vehicles', action: 'update'
+  # patch '/vehicles/:id', to: 'vehicles#update'
 
   # # Para deletar um veículo específico
-  # delete 'vehicles/:id', controller: 'vehicles', action: 'destroy'
-
+  # delete 'vehicles/:id', to: 'vehicles#destroy'
 end
-
-
