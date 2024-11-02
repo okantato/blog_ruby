@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   # Define a rota raiz
   root 'home#index'
 
+
   # Define as rotas para os veículos
-  resources :vehicles, only: [:index, :new, :create, :show]
+  resources :vehicles, only: %i[:index]
 
   # Abaixo estão os exemplos de rotas manuais comentados. 
   # Se você usar `resources :vehicles`, estas rotas são geradas automaticamente.
