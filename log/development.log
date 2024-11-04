@@ -2520,3 +2520,199 @@ Processing by VehiclesController#create as HTML
 Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 4984)
 
 
+Started GET "/" for 127.0.0.1 at 2024-11-02 19:30:07 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 401.9ms | Allocations: 109368)
+Completed 200 OK in 441ms (Views: 414.0ms | ActiveRecord: 0.0ms | Allocations: 117087)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-02 19:30:13 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 1815)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 2060)
+
+
+Started GET "/vehiches" for 127.0.0.1 at 2024-11-02 19:34:13 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/vehiches"):
+  
+Started GET "/vehiches" for 127.0.0.1 at 2024-11-02 20:19:36 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/vehiches"):
+  
+Started GET "/vehiches" for 127.0.0.1 at 2024-11-02 20:20:09 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/vehiches"):
+  
+Started GET "/vehicles" for 127.0.0.1 at 2024-11-02 20:20:16 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (5.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY "vehicles"."created_at" ASC[0m
+  ↳ app/views/vehicles/index.html.erb:3
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 34.4ms | Allocations: 7617)
+  Rendered layout layouts/application.html.erb (Duration: 65.7ms | Allocations: 26788)
+Completed 200 OK in 195ms (Views: 56.0ms | ActiveRecord: 39.6ms | Allocations: 40578)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-04 16:27:48 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 111.6ms | Allocations: 40390)
+Completed 200 OK in 144ms (Views: 117.8ms | ActiveRecord: 0.0ms | Allocations: 44485)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2024-11-04 16:28:17 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (2.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY "vehicles"."created_at" ASC[0m
+  ↳ app/views/vehicles/index.html.erb:3
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 28.8ms | Allocations: 7401)
+  Rendered layout layouts/application.html.erb (Duration: 34.5ms | Allocations: 9046)
+Completed 200 OK in 123ms (Views: 28.3ms | ActiveRecord: 27.9ms | Allocations: 19219)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-11-04 16:29:51 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/vehicles/new"):
+  
+Started GET "/vehicles/index" for 127.0.0.1 at 2024-11-04 16:29:58 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/vehicles/index"):
+  
+Started GET "/vehicles/" for 127.0.0.1 at 2024-11-04 16:30:03 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.0ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY "vehicles"."created_at" ASC[0m
+  ↳ app/views/vehicles/index.html.erb:3
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 552)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2305)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 1.0ms | Allocations: 2583)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-11-04 16:31:17 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/vehicles/new"):
+  
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-11-04 16:31:46 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1733)
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 20627)
+Completed 200 OK in 52ms (Views: 33.3ms | ActiveRecord: 5.1ms | Allocations: 25642)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2024-11-04 16:32:02 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"teste", "model"=>"testemodel", "year"=>"teste2024", "kind"=>"testetipo"}, "commit"=>"Create Vehicle"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:18:in `create'
+  [1m[36mVehicle Create (13.2ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "year", "created_at", "updated_at", "kind", "plate") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", "teste"], ["model", "testemodel"], ["year", 0], ["created_at", "2024-11-04 19:32:02.996332"], ["updated_at", "2024-11-04 19:32:02.996332"], ["kind", 0], ["plate", nil]]
+  ↳ app/controllers/vehicles_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:18:in `create'
+Redirected to http://127.0.0.1:3000/vehicles/9
+Completed 302 Found in 23ms (ActiveRecord: 14.8ms | Allocations: 3767)
+
+
+Started GET "/vehicles/9" for 127.0.0.1 at 2024-11-04 16:32:03 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 246)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 1983)
+Completed 200 OK in 18ms (Views: 8.1ms | ActiveRecord: 0.7ms | Allocations: 4940)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-11-04 16:36:12 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 645)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 2197)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 2453)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-11-04 16:42:34 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 11.1ms | Allocations: 1331)
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 20188)
+Completed 200 OK in 96ms (Views: 38.3ms | ActiveRecord: 9.5ms | Allocations: 27695)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-11-04 16:42:46 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 638)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 2190)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 2445)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-11-04 16:43:47 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1154)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 20063)
+Completed 200 OK in 62ms (Views: 33.8ms | ActiveRecord: 8.4ms | Allocations: 25021)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2024-11-04 16:44:27 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"teste", "model"=>"testemodel", "year"=>"3333333333", "kind"=>"222222"}, "commit"=>"Create Vehicle"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1400)
+
+
+  
+ActiveModel::RangeError (3333333333 is out of range for ActiveModel::Type::Integer with limit 4 bytes):
+  
+app/controllers/vehicles_controller.rb:18:in `create'
+Started POST "/vehicles" for 127.0.0.1 at 2024-11-04 16:45:43 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"teste", "model"=>"testemodel", "year"=>"3333333333", "kind"=>"222222"}, "commit"=>"Create Vehicle"}
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 5.5ms | Allocations: 5407)
+
+
+  
+ActiveModel::RangeError (3333333333 is out of range for ActiveModel::Type::Integer with limit 4 bytes):
+  
+app/controllers/vehicles_controller.rb:18:in `create'
+Started POST "/vehicles" for 127.0.0.1 at 2024-11-04 16:45:49 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"teste", "model"=>"testemodel", "year"=>"3333333333", "kind"=>"222222"}, "commit"=>"Create Vehicle"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1196)
+
+
+  
+ActiveModel::RangeError (3333333333 is out of range for ActiveModel::Type::Integer with limit 4 bytes):
+  
+app/controllers/vehicles_controller.rb:18:in `create'
+Started POST "/vehicles" for 127.0.0.1 at 2024-11-04 16:46:03 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"teste", "model"=>"testemodel", "year"=>"3333333333", "kind"=>"222222"}, "commit"=>"Create Vehicle"}
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 5.5ms | Allocations: 5456)
+
+
+  
+ActiveModel::RangeError (3333333333 is out of range for ActiveModel::Type::Integer with limit 4 bytes):
+  
+app/controllers/vehicles_controller.rb:18:in `create'
