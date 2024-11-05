@@ -1,0 +1,22 @@
+<%= form_with model: vehicle, data: { turbo: false } do |f| %>
+  <p>
+    <%= f.label :brand, 'Brand' %>
+    <%= f.text_field :brand %>
+  </p>
+  <p>
+    <%= f.label :model, 'Model' %>
+    <%= f.text_field :model %>
+  </p>
+  <p>
+    <%= f.label :year, 'Year' %>
+    <%= f.text_field :year %>
+  </p>
+  <p>
+    <%= f.label :kind, 'Kind' %>
+    <%= f.text_field :kind %>
+  </p>
+  <p>
+    <%= f.submit 'Create Vehicle' %>
+  </p>
+<% end %>
+
