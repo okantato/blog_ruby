@@ -1,13 +1,18 @@
 <h2> veiculos </h2>
+<p>
+  <%= link_to 'New Vehicle', new_vehicle_path %> | 
+</p>
 
 <% @vehicles.each do |vehicle| %>
-    <p>
-        <%= vehicle.id %>
-        <%= vehicle.brand %>
-        <%= vehicle.model %>
-        <%= vehicle.year %>
-        <%= vehicle.kind %>
+  <%= vehicle.id %>
+  <p>
+    <%= vehicle.brand %>
+    <%= vehicle.model %>
+    <%= vehicle.year %>
+    <%= vehicle.kind %>
+    <%= link_to 'Details' , vehicle_path(vehicle) %> |
+    <%= link_to 'Edit' , edit_vehicle_path(vehicle) %>
+    <%= link_to 'Destroy' , vehicle_path(vehicle) %>
   </p>
-
 <% end %>
 
