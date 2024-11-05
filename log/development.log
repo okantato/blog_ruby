@@ -2716,3 +2716,1029 @@ Completed 500 Internal Server Error in 25ms (ActiveRecord: 5.5ms | Allocations: 
 ActiveModel::RangeError (3333333333 is out of range for ActiveModel::Type::Integer with limit 4 bytes):
   
 app/controllers/vehicles_controller.rb:18:in `create'
+Started GET "/" for 127.0.0.1 at 2024-11-05 12:16:47 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 114.1ms | Allocations: 41010)
+Completed 200 OK in 133ms (Views: 121.3ms | ActiveRecord: 0.0ms | Allocations: 45105)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2024-11-05 12:16:59 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY "vehicles"."created_at" ASC[0m
+  ↳ app/views/vehicles/index.html.erb:3
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 30.7ms | Allocations: 7428)
+  Rendered layout layouts/application.html.erb (Duration: 39.8ms | Allocations: 10222)
+Completed 200 OK in 119ms (Views: 34.1ms | ActiveRecord: 26.6ms | Allocations: 20402)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-11-05 12:17:06 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1581)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 3133)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 3490)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2024-11-05 12:17:17 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"teste", "model"=>"testemodel", "year"=>"teste2024", "kind"=>"eeeeeeeeeeeeeeeeeee"}, "commit"=>"Create Vehicle"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:18:in `create'
+  [1m[36mVehicle Create (3.7ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "year", "created_at", "updated_at", "kind", "plate") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", "teste"], ["model", "testemodel"], ["year", 0], ["created_at", "2024-11-05 15:17:17.980965"], ["updated_at", "2024-11-05 15:17:17.980965"], ["kind", 0], ["plate", nil]]
+  ↳ app/controllers/vehicles_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:18:in `create'
+Redirected to http://127.0.0.1:3000/vehicles/10
+Completed 302 Found in 17ms (ActiveRecord: 6.4ms | Allocations: 3761)
+
+
+Started GET "/vehicles/10" for 127.0.0.1 at 2024-11-05 12:17:18 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:12:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 239)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 1965)
+Completed 200 OK in 20ms (Views: 8.8ms | ActiveRecord: 1.0ms | Allocations: 4433)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-05 12:17:26 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 1734)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 1972)
+
+
+Started GET "/vehicles/" for 127.0.0.1 at 2024-11-05 12:17:33 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY "vehicles"."created_at" ASC[0m
+  ↳ app/views/vehicles/index.html.erb:3
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 597)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2333)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 1.4ms | Allocations: 2609)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-05 14:03:18 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 129.5ms | Allocations: 42041)
+Completed 200 OK in 149ms (Views: 135.4ms | ActiveRecord: 0.0ms | Allocations: 46136)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-05 14:03:31 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1754)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 1997)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-11-05 14:03:40 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1633)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 3189)
+Completed 200 OK in 100ms (Views: 10.9ms | ActiveRecord: 17.9ms | Allocations: 18632)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2024-11-05 14:03:42 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"", "model"=>"", "year"=>"", "kind"=>""}, "commit"=>"Create Vehicle"}
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 11.8ms | Allocations: 3840)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 5388)
+Completed 200 OK in 24ms (Views: 19.0ms | ActiveRecord: 0.0ms | Allocations: 6824)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2024-11-05 14:11:07 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY "vehicles"."created_at" ASC[0m
+  ↳ app/views/vehicles/index.html.erb:3
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 12.8ms | Allocations: 3967)
+  Rendered layout layouts/application.html.erb (Duration: 57.3ms | Allocations: 23025)
+Completed 200 OK in 124ms (Views: 58.4ms | ActiveRecord: 12.2ms | Allocations: 28697)
+
+
+Started GET "/vehicles/edit" for 127.0.0.1 at 2024-11-05 14:11:14 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mVehicle Load (0.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:12:in `show'
+Completed 404 Not Found in 10ms (ActiveRecord: 0.9ms | Allocations: 2658)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Vehicle with 'id'=edit):
+  
+app/controllers/vehicles_controller.rb:12:in `show'
+Started GET "/vehicles/edit" for 127.0.0.1 at 2024-11-05 14:20:10 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:12:in `show'
+Completed 404 Not Found in 48ms (ActiveRecord: 9.7ms | Allocations: 5242)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Vehicle with 'id'=edit):
+  
+app/controllers/vehicles_controller.rb:12:in `show'
+Started GET "/vehicles/edit" for 127.0.0.1 at 2024-11-05 14:20:23 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:12:in `show'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms | Allocations: 876)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Vehicle with 'id'=edit):
+  
+app/controllers/vehicles_controller.rb:12:in `show'
+Started GET "/vehicles/edit" for 127.0.0.1 at 2024-11-05 14:22:57 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:12:in `show'
+Completed 404 Not Found in 20ms (ActiveRecord: 10.8ms | Allocations: 2612)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Vehicle with 'id'=edit):
+  
+app/controllers/vehicles_controller.rb:12:in `show'
+Started GET "/vehicles/edit" for 127.0.0.1 at 2024-11-05 14:23:22 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mVehicle Load (0.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:12:in `show'
+Completed 404 Not Found in 17ms (ActiveRecord: 7.6ms | Allocations: 2991)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Vehicle with 'id'={"controller"=>"vehicles", "action"=>"show", "id"=>"edit"}):
+  
+app/controllers/vehicles_controller.rb:12:in `show'
+Started GET "/vehicles/edit" for 127.0.0.1 at 2024-11-05 14:25:38 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+Completed 404 Not Found in 15ms (ActiveRecord: 6.9ms | Allocations: 2575)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Vehicle with 'id'=edit):
+  
+app/controllers/vehicles_controller.rb:11:in `show'
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-11-05 14:25:47 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1151)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 20045)
+Completed 200 OK in 37ms (Views: 29.6ms | ActiveRecord: 0.0ms | Allocations: 23809)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2024-11-05 14:26:00 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"teste21", "model"=>"testemodel2", "year"=>"2222222", "kind"=>"222222222"}, "commit"=>"Create Vehicle"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:16:in `create'
+  [1m[36mVehicle Create (3.1ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "year", "created_at", "updated_at", "kind", "plate") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", "teste21"], ["model", "testemodel2"], ["year", 2222222], ["created_at", "2024-11-05 17:26:00.687055"], ["updated_at", "2024-11-05 17:26:00.687055"], ["kind", 222222222], ["plate", nil]]
+  ↳ app/controllers/vehicles_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:16:in `create'
+Redirected to http://127.0.0.1:3000/vehicles/11
+Completed 302 Found in 13ms (ActiveRecord: 4.7ms | Allocations: 3490)
+
+
+Started GET "/vehicles/11" for 127.0.0.1 at 2024-11-05 14:26:00 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mVehicle Load (0.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 242)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 1974)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 0.8ms | Allocations: 2682)
+
+
+Started GET "/vehicles/11/edit" for 127.0.0.1 at 2024-11-05 14:26:10 -0300
+Processing by VehiclesController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:24:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/edit.html.erb within layouts/application
+  Rendered vehicles/edit.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1188)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 2750)
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 0.6ms | Allocations: 3451)
+
+
+Started PATCH "/vehicles/11" for 127.0.0.1 at 2024-11-05 14:26:40 -0300
+Processing by VehiclesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"teste21 para upd02", "model"=>"testemodel2", "year"=>"2222222", "kind"=>"222222222"}, "commit"=>"Update Vehicle", "id"=>"11"}
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:28:in `update'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:29:in `update'
+  [1m[36mVehicle Update (4.3ms)[0m  [1m[33mUPDATE "vehicles" SET "brand" = $1, "updated_at" = $2 WHERE "vehicles"."id" = $3[0m  [["brand", "teste21 para upd02"], ["updated_at", "2024-11-05 17:26:40.753710"], ["id", 11]]
+  ↳ app/controllers/vehicles_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:29:in `update'
+Redirected to http://127.0.0.1:3000/vehicles/11
+Completed 302 Found in 19ms (ActiveRecord: 6.5ms | Allocations: 2437)
+
+
+Started GET "/vehicles/11" for 127.0.0.1 at 2024-11-05 14:26:40 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1768)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.6ms | Allocations: 2405)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2024-11-05 14:26:58 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY "vehicles"."created_at" ASC[0m
+  ↳ app/views/vehicles/index.html.erb:3
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 855)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 2585)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 1.2ms | Allocations: 2930)
+
+
+Started GET "/vehicles/" for 127.0.0.1 at 2024-11-05 14:44:30 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/thaisbrito/Área de Trabalho/Estudos/blog_ruby/app/controllers/vehicles_controller.rb:46: syntax error, unexpected end-of-input):
+  
+app/controllers/vehicles_controller.rb:46: syntax error, unexpected end-of-input
+Started GET "/vehicles/" for 127.0.0.1 at 2024-11-05 14:45:09 -0300
+  
+SyntaxError (/home/thaisbrito/Área de Trabalho/Estudos/blog_ruby/app/controllers/vehicles_controller.rb:45: syntax error, unexpected end-of-input
+  end
+     ^
+):
+  
+app/controllers/vehicles_controller.rb:45: syntax error, unexpected end-of-input
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-11-05 14:50:14 -0300
+  
+SyntaxError (/home/thaisbrito/Área de Trabalho/Estudos/blog_ruby/app/controllers/vehicles_controller.rb:46: syntax error, unexpected end-of-input):
+  
+app/controllers/vehicles_controller.rb:46: syntax error, unexpected end-of-input
+Started GET "/vehicles/" for 127.0.0.1 at 2024-11-05 14:50:21 -0300
+  
+SyntaxError (/home/thaisbrito/Área de Trabalho/Estudos/blog_ruby/app/controllers/vehicles_controller.rb:46: syntax error, unexpected end-of-input):
+  
+app/controllers/vehicles_controller.rb:46: syntax error, unexpected end-of-input
+Started GET "/vehicles" for 127.0.0.1 at 2024-11-05 14:50:25 -0300
+  
+SyntaxError (/home/thaisbrito/Área de Trabalho/Estudos/blog_ruby/app/controllers/vehicles_controller.rb:46: syntax error, unexpected end-of-input):
+  
+app/controllers/vehicles_controller.rb:46: syntax error, unexpected end-of-input
+Started GET "/vehicles" for 127.0.0.1 at 2024-11-05 14:50:42 -0300
+  
+SyntaxError (/home/thaisbrito/Área de Trabalho/Estudos/blog_ruby/app/controllers/vehicles_controller.rb:46: syntax error, unexpected end-of-input):
+  
+app/controllers/vehicles_controller.rb:46: syntax error, unexpected end-of-input
+Started GET "/vehicles" for 127.0.0.1 at 2024-11-05 14:51:58 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY "vehicles"."created_at" ASC[0m
+  ↳ app/views/vehicles/index.html.erb:6
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 45.9ms | Allocations: 8028)
+  Rendered layout layouts/application.html.erb (Duration: 147.7ms | Allocations: 48713)
+Completed 200 OK in 230ms (Views: 144.6ms | ActiveRecord: 19.0ms | Allocations: 60287)
+
+
+Started GET "/Details" for 127.0.0.1 at 2024-11-05 14:51:59 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/Details"):
+  
+Started GET "/Details" for 127.0.0.1 at 2024-11-05 14:52:00 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/Details"):
+  
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-11-05 14:52:00 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1400)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 2966)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 3320)
+
+
+Started GET "/Details" for 127.0.0.1 at 2024-11-05 14:52:01 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/Details"):
+  
+Started GET "/Details" for 127.0.0.1 at 2024-11-05 14:52:11 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/Details"):
+  
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-11-05 14:52:11 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 663)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 2229)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 2490)
+
+
+Started GET "/Details" for 127.0.0.1 at 2024-11-05 14:52:16 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/Details"):
+  
+Started GET "/vehicles" for 127.0.0.1 at 2024-11-05 14:52:18 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY "vehicles"."created_at" ASC[0m
+  ↳ app/views/vehicles/index.html.erb:6
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 996)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 2763)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 1.2ms | Allocations: 3036)
+
+
+Started GET "/Details" for 127.0.0.1 at 2024-11-05 14:52:18 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/Details"):
+  
+Started GET "/vehicles" for 127.0.0.1 at 2024-11-05 14:52:21 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY "vehicles"."created_at" ASC[0m
+  ↳ app/views/vehicles/index.html.erb:6
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 996)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 2748)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 1.0ms | Allocations: 3020)
+
+
+Started GET "/Details" for 127.0.0.1 at 2024-11-05 14:52:21 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/Details"):
+  
+Started GET "/vehicles" for 127.0.0.1 at 2024-11-05 14:52:45 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY "vehicles"."created_at" ASC[0m
+  ↳ app/views/vehicles/index.html.erb:6
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 16.6ms | Allocations: 4313)
+  Rendered layout layouts/application.html.erb (Duration: 46.3ms | Allocations: 23405)
+Completed 200 OK in 58ms (Views: 44.4ms | ActiveRecord: 6.9ms | Allocations: 25483)
+
+
+Started GET "/vehicles/1" for 127.0.0.1 at 2024-11-05 14:52:45 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 1985)
+Completed 200 OK in 19ms (Views: 7.9ms | ActiveRecord: 0.8ms | Allocations: 4527)
+
+
+Started GET "/vehicles/1" for 127.0.0.1 at 2024-11-05 14:52:47 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 1734)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.6ms | Allocations: 2371)
+
+
+Started GET "/vehicles/2" for 127.0.0.1 at 2024-11-05 14:52:47 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVehicle Load (0.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1761)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.6ms | Allocations: 2395)
+
+
+Started GET "/vehicles/3" for 127.0.0.1 at 2024-11-05 14:52:50 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 1737)
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 0.6ms | Allocations: 2376)
+
+
+Started GET "/vehicles/3" for 127.0.0.1 at 2024-11-05 14:52:53 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mVehicle Load (0.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1781)
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 0.6ms | Allocations: 2418)
+
+
+Started GET "/vehicles/4" for 127.0.0.1 at 2024-11-05 14:52:53 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1745)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.5ms | Allocations: 2382)
+
+
+Started GET "/vehicles/4" for 127.0.0.1 at 2024-11-05 14:52:55 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 1758)
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 0.5ms | Allocations: 2395)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2024-11-05 14:54:44 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY "vehicles"."created_at" ASC[0m
+  ↳ app/views/vehicles/index.html.erb:6
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 18.9ms | Allocations: 4273)
+  Rendered layout layouts/application.html.erb (Duration: 58.4ms | Allocations: 23355)
+Completed 200 OK in 70ms (Views: 57.0ms | ActiveRecord: 6.2ms | Allocations: 25422)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2024-11-05 14:55:59 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.9ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY "vehicles"."created_at" ASC[0m
+  ↳ app/views/vehicles/index.html.erb:6
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 4127)
+  Rendered layout layouts/application.html.erb (Duration: 55.1ms | Allocations: 23205)
+Completed 200 OK in 66ms (Views: 54.1ms | ActiveRecord: 6.2ms | Allocations: 25268)
+
+
+Started GET "/vehicles/1" for 127.0.0.1 at 2024-11-05 14:56:01 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 226)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 1985)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.3ms | Allocations: 3276)
+
+
+Started GET "/vehicles/4" for 127.0.0.1 at 2024-11-05 14:56:02 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mVehicle Load (0.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1745)
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 0.8ms | Allocations: 2382)
+
+
+  [1m[36mVehicle Load (0.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVehicle Load (0.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Destroy (1.1ms)[0m  [1m[31mDELETE FROM "vehicles" WHERE "vehicles"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/vehicles" for 127.0.0.1 at 2024-11-05 14:57:03 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.0ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY "vehicles"."created_at" ASC[0m
+  ↳ app/views/vehicles/index.html.erb:6
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 824)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 2550)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 1.0ms | Allocations: 2816)
+
+
+  [1m[36mVehicle Load (0.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Destroy (1.5ms)[0m  [1m[31mDELETE FROM "vehicles" WHERE "vehicles"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/vehicles" for 127.0.0.1 at 2024-11-05 14:57:26 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY "vehicles"."created_at" ASC[0m
+  ↳ app/views/vehicles/index.html.erb:6
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 794)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 2508)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 1.3ms | Allocations: 2774)
+
+
+Started GET "/vehicles/1" for 127.0.0.1 at 2024-11-05 14:57:29 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 1767)
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.5ms | Allocations: 2404)
+
+
+Started GET "/vehicles/4" for 127.0.0.1 at 2024-11-05 14:57:30 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1745)
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.6ms | Allocations: 2382)
+
+
+Started GET "/vehicles/5" for 127.0.0.1 at 2024-11-05 14:57:30 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1763)
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 2400)
+
+
+Started GET "/vehicles/5" for 127.0.0.1 at 2024-11-05 14:57:31 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1754)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.5ms | Allocations: 2391)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2024-11-05 15:00:39 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY "vehicles"."created_at" ASC[0m
+  ↳ app/views/vehicles/index.html.erb:6
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 15.3ms | Allocations: 4935)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 5027)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 6.0ms | Allocations: 7096)
+
+
+  
+ActionView::Template::Error (undefined method `destroy_vehicle_path' for #<ActionView::Base:0x00000000026750>):
+    12:     <%= vehicle.kind %>
+    13:     <%= link_to 'Details' , vehicle_path(vehicle) %> |
+    14:     <%= link_to 'Edit' , edit_vehicle_path(vehicle) %>
+    15:     <%= link_to 'Destroy' , destroy_vehicle_path(vehicle) %>
+    16:   </p>
+    17: <% end %>
+  
+app/views/vehicles/index.html.erb:15
+app/views/vehicles/index.html.erb:6
+Started GET "/vehicles" for 127.0.0.1 at 2024-11-05 15:01:07 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1334)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1434)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.7ms | Allocations: 3517)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2> veiculos </h2>
+<p>
+  <%= link_to 'New Vehicle', new_vehicle_path %> | 
+</p>
+
+<% @vehicles.each do |vehicle| %>
+  <%= vehicle.id %>
+  <p>
+    <%= vehicle.brand %>
+    <%= vehicle.model %>
+    <%= vehicle.year %>
+    <%= vehicle.kind %>
+    <%= link_to 'Details' , vehicle_path(vehicle) %> |
+    <%= link_to 'Edit' , edit_vehicle_path(vehicle) %>
+    <%= link_to 'Destroy' , vehicle_path(vehicle), %>
+  </p>
+<% end %>
+
+
+):
+1:    <h2> veiculos </h2>
+2:    <p>
+3:      <%= link_to 'New Vehicle', new_vehicle_path %> | 
+4:    </p>
+5:    
+6:    <% @vehicles.each do |vehicle| %>
+7:      <%= vehicle.id %>
+8:      <p>
+9:        <%= vehicle.brand %>
+10:        <%= vehicle.model %>
+11:        <%= vehicle.year %>
+12:        <%= vehicle.kind %>
+13:        <%= link_to 'Details' , vehicle_path(vehicle) %> |
+14:        <%= link_to 'Edit' , edit_vehicle_path(vehicle) %>
+15:        <%= link_to 'Destroy' , vehicle_path(vehicle), %>
+16:      </p>
+17:    <% end %>
+  
+app/views/vehicles/index.html.erb:15: syntax error, unexpected ')'
+Started GET "/vehicles" for 127.0.0.1 at 2024-11-05 15:01:18 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (1.0ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY "vehicles"."created_at" ASC[0m
+  ↳ app/views/vehicles/index.html.erb:6
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 16.5ms | Allocations: 4573)
+  Rendered layout layouts/application.html.erb (Duration: 50.3ms | Allocations: 23743)
+Completed 200 OK in 61ms (Views: 47.6ms | ActiveRecord: 7.2ms | Allocations: 25807)
+
+
+Started GET "/vehicles/4" for 127.0.0.1 at 2024-11-05 15:01:20 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 227)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 1971)
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 0.3ms | Allocations: 3262)
+
+
+Started GET "/vehicles/11/edit" for 127.0.0.1 at 2024-11-05 15:01:22 -0300
+Processing by VehiclesController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:24:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/edit.html.erb within layouts/application
+  Rendered vehicles/edit.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1387)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 2935)
+Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 0.4ms | Allocations: 3634)
+
+
+Started GET "/vehicles/11" for 127.0.0.1 at 2024-11-05 15:01:23 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1755)
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.3ms | Allocations: 2392)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-11-05 15:01:28 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1035)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2587)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 2912)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2024-11-05 15:02:08 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"newcar01", "model"=>"argo", "year"=>"2024", "kind"=>"323232"}, "commit"=>"Create Vehicle"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:16:in `create'
+  [1m[36mVehicle Create (4.0ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "year", "created_at", "updated_at", "kind", "plate") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", "newcar01"], ["model", "argo"], ["year", 2024], ["created_at", "2024-11-05 18:02:08.898721"], ["updated_at", "2024-11-05 18:02:08.898721"], ["kind", 323232], ["plate", nil]]
+  ↳ app/controllers/vehicles_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:16:in `create'
+Redirected to http://127.0.0.1:3000/vehicles/12
+Completed 302 Found in 15ms (ActiveRecord: 5.8ms | Allocations: 3642)
+
+
+Started GET "/vehicles/12" for 127.0.0.1 at 2024-11-05 15:02:08 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 1763)
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.3ms | Allocations: 2400)
+
+
+Started GET "/vehicles/12" for 127.0.0.1 at 2024-11-05 15:03:26 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mVehicle Load (0.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1167)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 1259)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 7.0ms | Allocations: 7224)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `vehicle' for #<ActionView::Base:0x00000000031e98>):
+    27: </p>
+    28: 
+    29: 
+    30: <%= link_to 'Go back', vehicle_path(vehicle) %>
+  
+app/views/vehicles/show.html.erb:30
+Started GET "/vehicles/12" for 127.0.0.1 at 2024-11-05 15:03:49 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 947)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 20058)
+Completed 200 OK in 54ms (Views: 33.6ms | ActiveRecord: 6.0ms | Allocations: 26089)
+
+
+Started GET "/vehicles/12?url=%2Fvehicles%2F12" for 127.0.0.1 at 2024-11-05 15:03:50 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"url"=>"/vehicles/12", "id"=>"12"}
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 142)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 1871)
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 0.4ms | Allocations: 2508)
+
+
+Started GET "/vehicles/12?url=%2Fvehicles%2F12" for 127.0.0.1 at 2024-11-05 15:03:54 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"url"=>"/vehicles/12", "id"=>"12"}
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 142)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 1861)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 0.5ms | Allocations: 2498)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-11-05 15:04:46 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1176)
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 19945)
+Completed 200 OK in 47ms (Views: 29.9ms | ActiveRecord: 5.3ms | Allocations: 24888)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-11-05 15:04:48 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 630)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2182)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 2437)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2024-11-05 15:05:03 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"newcar02", "model"=>"argo", "year"=>"2023", "kind"=>"32323232"}, "commit"=>"Create Vehicle"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:16:in `create'
+  [1m[36mVehicle Create (2.9ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "year", "created_at", "updated_at", "kind", "plate") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", "newcar02"], ["model", "argo"], ["year", 2023], ["created_at", "2024-11-05 18:05:03.902584"], ["updated_at", "2024-11-05 18:05:03.902584"], ["kind", 32323232], ["plate", nil]]
+  ↳ app/controllers/vehicles_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:16:in `create'
+Redirected to http://127.0.0.1:3000/vehicles/13
+Completed 302 Found in 12ms (ActiveRecord: 4.2ms | Allocations: 2053)
+
+
+Started GET "/vehicles/13" for 127.0.0.1 at 2024-11-05 15:05:03 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 309)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2028)
+Completed 200 OK in 11ms (Views: 5.5ms | ActiveRecord: 0.4ms | Allocations: 3392)
+
+
+Started GET "/vehicles/13" for 127.0.0.1 at 2024-11-05 15:05:05 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1792)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.4ms | Allocations: 2429)
+
+
+Started GET "/vehicles/13" for 127.0.0.1 at 2024-11-05 15:05:06 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 1810)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 2447)
+
+
+Started GET "/vehicles/13" for 127.0.0.1 at 2024-11-05 15:05:07 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 1789)
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 0.5ms | Allocations: 2426)
+
+
+Started GET "/vehicles/13" for 127.0.0.1 at 2024-11-05 15:05:26 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 338)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 19441)
+Completed 200 OK in 49ms (Views: 26.8ms | ActiveRecord: 6.3ms | Allocations: 25379)
+
+
+Started GET "/vehicles/13" for 127.0.0.1 at 2024-11-05 15:05:39 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 875)
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 19942)
+Completed 200 OK in 57ms (Views: 36.5ms | ActiveRecord: 6.8ms | Allocations: 25915)
+
+
+Started GET "/vehicles/13" for 127.0.0.1 at 2024-11-05 15:05:41 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 130)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 1895)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.3ms | Allocations: 2532)
+
+
+Started GET "/vehicles/13" for 127.0.0.1 at 2024-11-05 15:05:47 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 246)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 19231)
+Completed 200 OK in 49ms (Views: 28.5ms | ActiveRecord: 5.8ms | Allocations: 25265)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2024-11-05 15:05:51 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.9ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY "vehicles"."created_at" ASC[0m
+  ↳ app/views/vehicles/index.html.erb:6
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1701)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3424)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.9ms | Allocations: 3769)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2024-11-05 15:06:42 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1162)
+  Rendered layout layouts/application.html.erb (Duration: 32.6ms | Allocations: 20057)
+Completed 200 OK in 52ms (Views: 35.2ms | ActiveRecord: 4.8ms | Allocations: 25000)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2024-11-05 15:06:45 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"newcar0", "model"=>"", "year"=>"", "kind"=>""}, "commit"=>"Create Vehicle"}
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2900)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 4449)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 5646)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2024-11-05 15:06:53 -0300
+Processing by VehiclesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"brand"=>"newcar03", "model"=>"argo", "year"=>"teste2024", "kind"=>"323232"}, "commit"=>"Create Vehicle"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:16:in `create'
+  [1m[36mVehicle Create (3.9ms)[0m  [1m[32mINSERT INTO "vehicles" ("brand", "model", "year", "created_at", "updated_at", "kind", "plate") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["brand", "newcar03"], ["model", "argo"], ["year", 0], ["created_at", "2024-11-05 18:06:53.043224"], ["updated_at", "2024-11-05 18:06:53.043224"], ["kind", 323232], ["plate", nil]]
+  ↳ app/controllers/vehicles_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:16:in `create'
+Redirected to http://127.0.0.1:3000/vehicles/14
+Completed 302 Found in 12ms (ActiveRecord: 5.3ms | Allocations: 1973)
+
+
+Started GET "/vehicles/14" for 127.0.0.1 at 2024-11-05 15:06:53 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 287)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2006)
+Completed 200 OK in 12ms (Views: 6.8ms | ActiveRecord: 0.5ms | Allocations: 3370)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2024-11-05 15:06:54 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.9ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" ORDER BY "vehicles"."created_at" ASC[0m
+  ↳ app/views/vehicles/index.html.erb:6
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 27.3ms | Allocations: 1761)
+  Rendered layout layouts/application.html.erb (Duration: 53.4ms | Allocations: 3496)
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 0.9ms | Allocations: 3841)
+
+
+Started GET "/vehicles/13/edit" for 127.0.0.1 at 2024-11-05 15:07:02 -0300
+Processing by VehiclesController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:24:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/edit.html.erb within layouts/application
+  Rendered vehicles/edit.html.erb within layouts/application (Duration: 17.5ms | Allocations: 1131)
+  Rendered layout layouts/application.html.erb (Duration: 30.8ms | Allocations: 2684)
+Completed 200 OK in 45ms (Views: 31.8ms | ActiveRecord: 0.4ms | Allocations: 3383)
+
+
