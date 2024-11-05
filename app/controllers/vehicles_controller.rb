@@ -1,6 +1,8 @@
 class VehiclesController < ApplicationController
+  before_action :fetch_vehicle, only: %i[show edit update destroy]
+
   def index
-    @vehicles = Vehicle.all.order(:created_at)
+    @vehicles = Vehicle.all
   end
   
   def new
@@ -8,16 +10,12 @@ class VehiclesController < ApplicationController
   end 
 
   def show
-    @vehicle = Vehicle.find(params[:id])
   end
 
   def create
     @vehicle = Vehicle.new(vehicle_params)
-    if @vehicle.save
-      redirect_to vehicle_path(@vehicle)
-    else
-      render :new
-    end  
+    return redirect_to vehicle_path(@vehicle) if @vehicle.save
+    render :new
   end
 
   def edit
@@ -25,23 +23,22 @@ class VehiclesController < ApplicationController
   end
 
   def destroy
-    @vehicle = Vehicle.find(params[:id])
     @vehicle.destroy
     redirect_to vehicles_path 
   end 
 
   def update
-    @vehicle = Vehicle.find(params[:id])
-    if @vehicle.update(vehicle_params)
-      redirect_to vehicle_path(@vehicle)
-    else
-      render :edit 
-    end
+    return redirect_to vehicle_path(@vehicle) if @vehicle.update(vehicle_params)
+    render :edit 
   end  
   
   private
   
   def vehicle_params
     params.require(:vehicle).permit(:brand, :model, :year, :kind)
+  end
+
+  def fetch_vehicle
+    @vehicle = Vehicle.find(params[:id])
   end
 end
